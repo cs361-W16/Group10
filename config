@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+[remote "origin"]
+	url = https://www.github.com/cs361-W16/Assignment-1.git
+	fetch = +refs/*:refs/*
+	mirror = true
+[remote "group"]
+	url = https://www.github.com/cs361-W16/Group10.git
+	fetch = +refs/heads/*:refs/remotes/group/*
