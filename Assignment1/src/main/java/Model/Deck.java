@@ -8,6 +8,7 @@ import org.apache.commons.lang3.ArrayUtils;
 public class Deck {
         private int count;
         private Card[] cards;
+	//public void shuffle();
 
         public Deck(){
                 count = 52;
@@ -23,7 +24,11 @@ public class Deck {
                                 i++;
                         }
                 }
+		//Shuffle cards here
+		shuffle();
         }
+	
+
         public int getCount(){
                 return count;
         }
@@ -35,5 +40,19 @@ public class Deck {
                         temp = cards[count];
 
                 return temp;
+        }
+
+	/**
+	*Created by Natasha Anisimova
+	*/
+
+	public void shuffle() {
+	    for ( int i = cards.length-1; i > 0; i-- ) {
+	            int rand = (int)(Math.random()*(i+1));
+	            Card temp = cards[i];
+	            cards[i] = cards[rand];
+	            cards[rand] = temp;
+            }
+	    cardsUsed = 0;
         }
 }
