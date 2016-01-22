@@ -30,6 +30,10 @@ public class Deck {
 
         public Card draw() {
                 count-=1;
-                return cards[count];
+                Card temp = null;
+                if(count >= 0)
+                        temp = cards[count];
+
+                return temp;
         }
 }

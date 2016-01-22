@@ -43,11 +43,24 @@ public class ModelTest {
         assertEquals(temp.getFace(), temp2.getFace());
     }
     @Test
-    public void testCardSpecific(){
+    public void testDrawCardSpecific(){
         Deck stack = new Deck();
         Card temp = stack.draw();
 
         assertEquals('C', temp.getSuit());
         assertEquals(13, temp.getFace());
+    }
+
+    @Test
+    public void testCard(){
+        Card temp = new Card();
+        assertEquals(0, temp.getSuit());
+        assertEquals(0, temp.getFace());
+
+        temp.setSuit('A');
+        temp.setFace(1);
+
+        assertEquals('A', temp.getSuit());
+        assertEquals(1, temp.getFace());
     }
 }
