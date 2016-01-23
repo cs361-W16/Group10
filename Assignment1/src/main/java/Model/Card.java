@@ -1,7 +1,7 @@
 package Model;
 
 /**
- * Created by Charles on 1/22/2016.
+ * Created by Codysseus on 1/21/2016.
  */
 public class Card {
     private char suit;

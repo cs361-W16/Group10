@@ -50,7 +50,7 @@
       <file leaf-file-name="Matching.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/Matching.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.470589">
+            <state vertical-scroll-proportion="-1.9411764">
               <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
               <folding />
             </state>
@@ -61,10 +61,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/Card.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.11262798">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
               <folding>
-                <element signature="e#339#340#0" expanded="true" />
-                <element signature="e#366#367#0" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
+                <element signature="e#368#369#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -807,8 +807,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding>
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -911,7 +911,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/Matching.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.470589">
+        <state vertical-scroll-proportion="-1.9411764">
           <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
           <folding />
         </state>
@@ -920,10 +920,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11262798">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
           <folding>
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
           </folding>
         </state>
       </provider>
