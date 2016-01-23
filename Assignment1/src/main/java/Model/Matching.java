@@ -53,19 +53,5 @@ public class Matching {
 
     }
 
-    public char getSuit() {
-        return suit;
-    }
-
-    public void setSuit(char suit) {
-        this.suit = suit;
-    }
-
-    public int getFace() {
-        return face;
-    }
-
-    public void setFace(int face) {
-        this.face = face;
-    }*/
+}*/
 }
