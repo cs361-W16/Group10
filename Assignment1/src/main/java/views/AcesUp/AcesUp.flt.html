@@ -91,6 +91,34 @@
         <button id="dealButton">Deal</button>
         <button id="removeButton">Remove</button>
 
+    <script>
+
+        var list;
+        function display(list) {
+        $( '#TodoList' ).html("");
+          $.each(list.todoItems, function( key, value ) {
+            $( '#TodoList' ).append(value + "<BR>");
+          });
+        }
+        $.getJSON("http://localhost:8080/todoList.json", function( data ) {
+        display(data);
+        list = data;
+        });
+        $("#dealButton").click(function(){
+        list.action = "add";
+        list.item = $("#txt_name").val();
+        $.ajax({
+          type: "POST",
+          url: "/todoList.json",
+          data: JSON.stringify(list),
+          success: function(data, status){console.log("Data: " + data + "\nStatus: " + status);
+                list = data;
+                display(data);},
+          contentType:"application/json; charset=utf-8",
+          dataType:"json",
+        });
+        });
+    </script>
 
     </body>
 </html>
