@@ -7,7 +7,8 @@ public class Matching {
 /**
 
  /*not sure how to access the positions of the cards at the moment, the ___ are where that information goes though
-   ____[] faceup = new ___;
+    Void matching (){
+    ____[] faceup = new ___;
   faceup[0]=(bottom of c1);
   faceup[1]=(bottom of c2);
   faceup[2]=(bottom of c3);
@@ -15,6 +16,7 @@ public class Matching {
   while(faceup.length!=0){
       faceup=findmatches(faceup);
    }
+ }
    also not positive how to do pointers in java, other than that they're apparently called references
   ____[] findmatches(____ []){
   int nomatch = 0;
