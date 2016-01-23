@@ -47,12 +47,16 @@ public class Deck {
 	*/
 
 	public void shuffle() {
-	    for ( int i = cards.length-1; i > 0; i-- ) {
+	    for ( int i = cards.length-1; i >= 0; i-- ) {
 	            int rand = (int)(Math.random()*(i+1));
 	            Card temp = cards[i];
 	            cards[i] = cards[rand];
 	            cards[rand] = temp;
             }
-	    cardsUsed = 0;
+	    //cardsUsed = 0;
         }
+	// print shuffled deck
+	//for (int i = 0; i < cards.length; i++) {
+	//	System.out.println(cards[i]);
+      //   }
 }
