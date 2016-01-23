@@ -17,6 +17,9 @@
 package controllers;
 
 
+import Model.Card;
+import Model.Deck;
+import org.apache.commons.lang.ObjectUtils;
 import org.junit.Test;
 
 import ninja.NinjaDocTester;
@@ -25,6 +28,9 @@ import org.doctester.testbrowser.Response;
 import org.hamcrest.CoreMatchers;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
+
 
 public class ApiControllerDocTesterTest extends NinjaDocTester {
     
