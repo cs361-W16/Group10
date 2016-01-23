@@ -53,6 +53,5 @@ public class Deck {
 	            cards[i] = cards[rand];
 	            cards[rand] = temp;
             }
-	    cardsUsed = 0;
         }
 }
