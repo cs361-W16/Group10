@@ -93,6 +93,8 @@
 
 <BR>Move from column <input type="text" id="from_col"  /> to <input type="text" id="to_col"  /> <button id="moveButton">Move</button>
 
+<BR><button id="newGame">New Game</button>
+
 <script>
 
 var game;
@@ -177,6 +179,19 @@ var colTo = $("#to_col").val();
 $.ajax({
   type: "POST",
   url: "/moveCard/"+colFrom+"/"+colTo,
+  data: JSON.stringify(game),
+  success: function(data, status){console.log("Data: " + data + "\nStatus: " + status);
+        game = data;
+        display(data);},
+  contentType:"application/json; charset=utf-8",
+  dataType:"json",
+});
+});
+
+$("#newGame").click(function(){
+$.ajax({
+  type: "GET",
+  url: "/game",
   data: JSON.stringify(game),
   success: function(data, status){console.log("Data: " + data + "\nStatus: " + status);
         game = data;
