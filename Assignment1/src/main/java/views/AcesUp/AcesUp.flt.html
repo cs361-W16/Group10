@@ -5,7 +5,9 @@
 
 <body background="http://hdimagesnew.com/wp-content/uploads/2015/11/C-black-and-white-cat.jpg">
 
+<h1 id = "score">Score: 0</h1>
 <table>
+
     <tr class="title">
         <td>Column0</td>
         <td >Column1</td>
@@ -101,6 +103,9 @@ var game;
 
 function display(game) {
 console.log(game);
+
+$( '#score' ).html("Score: " + game.score);
+
 
 $( '.columnOfCards .cardLocation' ).html("");
 
