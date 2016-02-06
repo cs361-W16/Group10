@@ -2,6 +2,7 @@
 
 <link href="/assets/css/AcesUp.css" rel="stylesheet">
 <script type="text/javascript" src="/assets/webjars/jquery/2.1.3/jquery.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 <body background="http://hdimagesnew.com/wp-content/uploads/2015/11/C-black-and-white-cat.jpg">
 <html lang="en">
@@ -104,7 +105,26 @@
     </tr>
 </table>
 
+
 <button id="dealButton">Deal</button>
+
+<button id="infoButton">?</button>
+<p id="info" style="border-style: groove; margin-right: 900px; display: none"> 1. Deal four cards in a row face up.<br>
+
+    2. If there are two or more cards of the same suit, discard all but the highest-ranked card of that suit.<br>
+
+    3. Repeat step 2 until there are no more pairs of cards with the same suit.<br>
+
+    4. Whenever there are any empty spaces, you may choose the top card of another pile to be put into the empty space. After you do this, go to Step 2.<br>
+
+    5. When there are no more cards to move or remove, deal out the next four cards from the deck face-up onto each pile.<br>
+
+    6. Repeat Step 2, using only the visible, or top, cards on each of the four piles.<br>
+
+    7. When the last four cards have been dealt out and any moves made, the game is over. The fewer cards left in the tableau, the better. To win is to have only the four aces left.
+
+    When the game ends, the number of discarded cards is your score. The maximum score (and thus the score necessary to win) is 48, which means all cards have been discarded except for the four aces, thus the name of the game.</p>
+
 <BR>Remove from: <button id="Remove1">Column1</button><button id="Remove2">Column2</button><button id="Remove3">Column3</button><button id="Remove4">Column4</button>
 
 <BR>Move from column <input type="text" id="from_col"  /> to <input type="text" id="to_col"  /> <button id="moveButton">Move</button>
@@ -164,6 +184,12 @@ $.ajax({
   contentType:"application/json; charset=utf-8",
   dataType:"json",
 });
+});
+
+$("#infoButton").click(function(){
+    console.log("clicked!!");
+    $("#info").toggle(1000)
+
 });
 
 
