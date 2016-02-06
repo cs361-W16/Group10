@@ -4,6 +4,20 @@
 <script type="text/javascript" src="/assets/webjars/jquery/2.1.3/jquery.js"></script>
 
 <body background="http://hdimagesnew.com/wp-content/uploads/2015/11/C-black-and-white-cat.jpg">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Draggable - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        #draggable { width: 100px; height: 20px; padding: 0.5em; }
+        #move0, #move1, #move2, #move3 { width: 100px; height: 40px; padding: 0.5em; float: left; margin: 10px; }
+    </style>
+</head>
 
 <h1 id = "score">Score: 0</h1>
 <table>
@@ -124,7 +138,11 @@ $( '.columnOfCards .cardLocation' ).html("");
  $.each(game.cols[3], function( key, val ) {
         $( '#c3 .l'+key ).html(val.value + val.suit);
     });
-
+reset();
+setDrag(game);
+setDrop(game);
+drag();
+drop();
 
 
 }
@@ -162,7 +180,120 @@ dataType:"json",
 });
 
 }
+function setDrag(game){
+var i=0;
+$.each(game.cols[0], function( key, val ) {
+        $( '#c0 .l'+key ).html(val.value + val.suit);
+        i++;
+    });
+    $($("#c0 td")[i-1]).draggable({ disabled: false })
+    $($("#c0 td")[i-1]).draggable({revert:"invalid"});
+i=0;
+$.each(game.cols[1], function( key, val ) {
+        $( '#c1 .l'+key ).html(val.value + val.suit);
+        i++;
+    });
+    $($("#c1 td")[i-1]).draggable({ disabled: false })
+    $($("#c1 td")[i-1]).draggable({revert:"invalid"});
+i=0;
+$.each(game.cols[2], function( key, val ) {
+        $( '#c2 .l'+key ).html(val.value + val.suit);
+        i++;
+    });
+    $($("#c2 td")[i-1]).draggable({ disabled: false })
+    $($("#c2 td")[i-1]).draggable({revert:"invalid"});
+i=0;
+$.each(game.cols[3], function( key, val ) {
+        $( '#c3 .l'+key ).html(val.value + val.suit);
+        i++;
+    });
+    $($("#c3 td")[i-1]).draggable({ disabled: false })
+    $($("#c3 td")[i-1]).draggable({revert:"invalid"});
+}
 
+function setDrop(game){
+var i=0;
+$.each(game.cols[0], function( key, val ) {
+        $( '#c0 .l'+key ).html(val.value + val.suit);
+        i++;
+    });
+		$($("#c0 td")[i]).droppable({ disabled: false });
+i=0
+$.each(game.cols[1], function( key, val ) {
+        $( '#c1 .l'+key ).html(val.value + val.suit);
+        i++;
+    });
+    $($("#c1 td")[i]).droppable({ disabled: false });
+i=0;
+$.each(game.cols[2], function( key, val ) {
+        $( '#c2 .l'+key ).html(val.value + val.suit);
+        i++;
+    });
+    $($("#c2 td")[i]).droppable({ disabled: false });
+i=0;
+$.each(game.cols[3], function( key, val ) {
+        $( '#c3 .l'+key ).html(val.value + val.suit);
+        i++;
+    });
+    $($("#c3 td")[i]).droppable({ disabled: false });
+}
+
+function reset(game){
+    for(var i=0;i<14;i++){
+        $($("#c0 td")[i]).draggable({ disabled: true });
+        $($("#c1 td")[i]).draggable({ disabled: true });
+        $($("#c2 td")[i]).draggable({ disabled: true });
+        $($("#c3 td")[i]).draggable({ disabled: true });
+        $($("#c0 td")[i]).droppable({ disabled: true });
+        $($("#c1 td")[i]).droppable({ disabled: true });
+        $($("#c2 td")[i]).droppable({ disabled: true });
+        $($("#c3 td")[i]).droppable({ disabled: true });
+    }
+}
+
+ function drag() {
+    $( "#draggable" ).draggable({revert:"invalid"});
+ }
+
+ function drop(){
+    $( "#move0" ).droppable({
+      activeClass: "ui-state-default",
+      hoverClass: "ui-state-hover",
+      drop: function( event, ui ) {
+        $( this )
+        event.droppable
+         console.dir(ui.draggable);
+      }
+    });
+    $( "#move1" ).droppable({
+      activeClass: "ui-state-default",
+      hoverClass: "ui-state-hover",
+      drop: function( event, ui ) {
+        $( this )
+        event.droppable
+         console.dir(ui.draggable);
+      }
+    });
+    $( "#move2" ).droppable({
+      activeClass: "ui-state-default",
+      hoverClass: "ui-state-hover",
+      drop: function( event, ui ) {
+        $( this )
+        event.droppable
+         console.dir(ui.draggable);
+      }
+    });
+    $( "#move3" ).droppable({
+      activeClass: "ui-state-default",
+      hoverClass: "ui-state-hover",
+      drop: function( event, ui ) {
+        $( this )
+        event.droppable
+         console.dir(ui.draggable).id;
+         this;
+      }
+    });
+  }
 
 $("#Remove1").click(function(){
     removeCard(0);
