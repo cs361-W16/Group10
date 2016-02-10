@@ -1,4 +1,34 @@
-<h1>Aces Up</h1>
+<style>
+    div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+    .button {
+    background-color: #D3D3D3; /* light grey */
+    border: none;
+    color: ;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    .button4 {border-radius: 12px;}
+</style>
+<div class="transbox">
+    <h1 style="color:black;">Aces Up</h1>
+</div>
 
 <link href="/assets/css/AcesUp.css" rel="stylesheet">
 <script type="text/javascript" src="/assets/webjars/jquery/2.1.3/jquery.js"></script>
@@ -6,7 +36,6 @@
 
 <body background="http://hdimagesnew.com/wp-content/uploads/2015/11/C-black-and-white-cat.jpg">
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>jQuery UI Draggable - Default functionality</title>
@@ -20,7 +49,7 @@
     </style>
 </head>
 
-<h1  style="color:blue;" id = "score">Score: 0</h1>
+<h1 style="color:blue;" id = "score">Score: 0</h1>
 <table>
 
     <tr class="title">
@@ -105,24 +134,9 @@
     </tr>
 </table>
 
-<style>
-    .button {
-         background-color: #D3D3D3; /* light grey */
-         border: none;
-         color: ;
-         padding: 15px 32px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 16px;
-         margin: 4px 2px;
-         cursor: pointer;
-     }
-     .button4 {border-radius: 12px;}
- </style>
 <button class="button button4" id="dealButton">Deal</button>
-<button class="button button4" id="infoButton">?</button>
 
+<button class="button button4" id="infoButton">?</button>
 <p id="info" style="border-style: groove; margin-right: 900px; display: none"> 1. Deal four cards in a row face up.<br>
 
     2. If there are two or more cards of the same suit, discard all but the highest-ranked card of that suit.<br>
@@ -381,6 +395,6 @@ $.ajax({
 </script>
 
 
-
 </body>
 </html>
+
