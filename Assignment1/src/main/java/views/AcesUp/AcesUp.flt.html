@@ -20,7 +20,7 @@
     </style>
 </head>
 
-<h1 id = "score">Score: 0</h1>
+<h1 style="color:blue;" id = "score">Score: 0</h1>
 <table>
 
     <tr class="title">
@@ -104,11 +104,25 @@
         </td>
     </tr>
 </table>
+<style>
+    .button {
+        background-color: #D3D3D3; /* light grey */
+        border: none;
+        color: ;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .button4 {border-radius: 12px;}
+</style>
 
+<button class="button button4" id="dealButton">Deal</button>
 
-<button id="dealButton">Deal</button>
-
-<button id="infoButton">?</button>
+<button class="button button4" id="infoButton">?</button>
 <p id="info" style="border-style: groove; margin-right: 900px; display: none"> 1. Deal four cards in a row face up.<br>
 
     2. If there are two or more cards of the same suit, discard all but the highest-ranked card of that suit.<br>
@@ -129,7 +143,7 @@
 
 <BR>Move from column <input type="text" id="from_col"  /> to <input type="text" id="to_col"  /> <button id="moveButton">Move</button>
 
-<BR><button id="newGame">New Game</button>
+<BR><button class="button button4" id="newGame">New Game</button>
 
 <script>
 
